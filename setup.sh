@@ -2,7 +2,7 @@
 passwd
 
 # name machine after Kim Wexler
-sudo hostname kim
+sudo sed -i s/"rockpro64"/"kim"/g /etc/hosts /etc/hostname
 
 # generate an identity for this machine
 ssh-keygen -t ed25519
