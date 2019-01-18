@@ -6,3 +6,6 @@ ssh-copy-id rock64@kim.local
 # copy kitty .terminfo to target machine
 kitty +kitten ssh rock64@kim.local
 
+# edit ssh config to add an alias to the long onion hostname
+# user torsocks ssh to access the onion ssh server
+
