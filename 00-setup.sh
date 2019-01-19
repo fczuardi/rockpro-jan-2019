@@ -15,6 +15,10 @@ git clone git@github.com:fczuardi/zuardistros.git
 cd ~/zuardistros/partials
 cat begin.sh packages_multicast.sh end.sh |sed -e 's/apt/sudo apt/g'|bash
 
+# install mosh
+source config_locale.sh
+cat begin.sh packages_mosh.sh end.sh |sed -e 's/apt/sudo apt/g'|bash
+
 # install tor
 source config_tor.sh
 cat begin.sh packages_multicast.sh end.sh |sed -e 's/apt/sudo apt/g'|bash
