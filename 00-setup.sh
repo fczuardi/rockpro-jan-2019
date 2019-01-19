@@ -29,7 +29,7 @@ sudo chown debian-tor:debian-tor /var/lib/tor/ssh
 sudo chmod 700 /var/lib/tor/ssh
 sudo vim /etc/tor/torrc
 sudo systemctl restart tor
-sudo journalctl
+sudo journalctl -f
 sudo cat /var/lib/tor/ssh/hostname
 
 exit
