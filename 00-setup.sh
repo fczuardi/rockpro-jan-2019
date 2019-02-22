@@ -7,6 +7,9 @@ sudo sed -i s/"rockpro64"/"kim"/g /etc/hosts /etc/hostname
 # generate an identity for this machine
 ssh-keygen -t ed25519
 
+# set timezone
+sudo dpkg-reconfigure tzdata
+
 # download zuardistros to get useful partials
 cd ~/
 git clone git@github.com:fczuardi/zuardistros.git
@@ -32,5 +35,10 @@ sudo systemctl restart tor
 sudo journalctl -f
 sudo cat /var/lib/tor/ssh/hostname
 
+# install man
+sudo apt install man
+
+# torrent daemon and client
+cat begin.sh packages_torrent.sh end.sh |sed -e 's/apt/sudo apt/g'|bash
 exit
 
